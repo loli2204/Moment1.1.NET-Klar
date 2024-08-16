@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moment 1.1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MyApp1.styles.css" asp-append-version="true" />
+    @RenderSection("Styles", false)
+</head>
+<body>
+    <header>
+    <div class="logo-container">
+        <div class="logotyp">
+            <img id="logo" src="~/images/logo.png" alt="Logotyp">
+        </div>
+        <div id="currentDate">
+            @DateTime.Now.ToString("yyyy-MM-dd")
+        </div>
+    </div>
+</header>
+    <div class="main-container">
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="/">Start</a></li>
+                    <li><a href="/Razor">Razor-sidan</a></li>
+                    <li><a href="/About">Om sidan</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            @RenderBody()
+        </div>
+    </div>
+    <footer>
+       Av Student Louise Lindberg - loli2204@student.miun.se
+    </footer>
+    <script src="~/js/site.js"></script>
+</body>
+</html>

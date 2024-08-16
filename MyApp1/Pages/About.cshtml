@@ -1,0 +1,37 @@
+@page
+@{
+    ViewData["Title"] = "Om Mig";
+}
+
+<h1>Om Mig</h1>
+<p>Mitt namn är Louise Lindberg och jag blir 22 i år. 
+    Jag läser andra och sista året på webbutvecklingsprogrammet på Mittuniversitetet. 
+    På fritiden spelar jag ishockey och umgås med min hund.</p>
+
+<div class="slideshow-container">
+    <div id="slideshow" class="slideshow">
+        <img src="~/images/bild1.jpg" alt="Bild 1" class="slide">
+        <img src="~/images/bild2.jpg" alt="Bild 2" class="slide">
+        <img src="~/images/bild3.jpg" alt="Bild 3" class="slide">
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .slide {
+            width: 300px; /* Ändra till önskad bredd */
+            height: 400px; /* Ändra till önskad höjd */
+            display: none; /* Dölj bilderna som standard */
+        }
+
+        .slideshow-container {
+            margin: 20px auto; /* Centrera bildspelet horisontellt */
+            width: 300px; /* Bredden på bildspelet */
+        }
+
+        .slideshow {
+            position: relative; /* Relativ position för att hantera positionering av bilderna */
+            overflow: hidden; /* Dölj överflödiga delar av bildspelet */
+        }
+    </style>
+}
